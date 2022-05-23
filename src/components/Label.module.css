@@ -1,0 +1,15 @@
+.label {
+  display: flex;
+  justify-content: space-between;
+  color: var(--clr-grayish-cyan-500);
+}
+
+.label .error {
+  color: var(--clr-error);
+  visibility: hidden;
+  text-align: right;
+}
+
+.label .error.show {
+  visibility: visible;
+}

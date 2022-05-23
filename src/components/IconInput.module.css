@@ -1,0 +1,51 @@
+.container {
+  display: flex;
+  align-items: center;
+  padding: 0.25rem 1rem 0.36rem 1rem;
+  background-color: var(--clr-grayish-cyan-100);
+  border-radius: var(--br-input);
+  cursor: text;
+}
+
+.container.error {
+  outline: 2px solid var(--clr-error);
+}
+
+.container:not(.error):focus-within {
+  outline: 2px solid var(--clr-cyan);
+}
+
+.container > img {
+  margin-left: 0.15rem;
+  margin-right: 0.5rem;
+}
+
+/* 
+ * To only accept numbers, the input's type is set as
+ * 'number' and since some browsers will add additional 
+ * controlls to this type of input, we need to add 
+ * styling to remove them 
+ */
+
+.input {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  color: var(--clr-grayish-cyan-700);
+  text-align: end;
+  font-size: var(--fs-input);
+  outline: none;
+  /* Handles Firefox */
+  -moz-appearance: textfield;
+}
+
+.input::placeholder {
+  color: var(--clr-grayish-cyan-400);
+}
+
+/* Handles Chrome, Safari, Edge and Opera */
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

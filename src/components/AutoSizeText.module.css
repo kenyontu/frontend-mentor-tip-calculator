@@ -1,0 +1,4 @@
+.text {
+  transform-origin: right;
+  transition: transform 100ms ease-in;
+}

@@ -1,0 +1,159 @@
+.logo {
+  width: 5.5rem;
+  margin-top: 3.15rem;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  min-width: 375px;
+  max-width: 500px;
+  margin-top: 2.45rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--clr-white);
+  border-radius: 26px;
+  padding: 1.5rem;
+  box-shadow: 0 1rem 30px px var(--clr-shadow);
+}
+
+.inputSection {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputSection > .label:not(:first-child) {
+  margin-top: 2rem;
+}
+
+.input {
+  margin-top: 0.4rem;
+}
+
+.percentageChooser {
+  margin-top: 1.0205rem;
+}
+
+.resultSection {
+  margin-top: 1.52rem;
+  padding: 2.45rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--clr-grayish-cyan-700);
+  border-radius: 15px;
+}
+
+.resultRow {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+}
+
+.resultRow + .resultRow {
+  margin-top: 1.5rem;
+}
+
+.resultRow > div:first-child {
+  display: flex;
+  flex-direction: column;
+}
+
+.resultRow > div:first-child > span:nth-child(1) {
+  color: var(--clr-grayish-cyan-100);
+}
+
+.resultRow > div:first-child > span:nth-child(2) {
+  font-size: 0.8rem;
+  color: var(--clr-grayish-cyan-400);
+}
+
+.resultRow .resultText {
+  position: absolute;
+  right: 0;
+  color: var(--clr-cyan);
+  font-size: 1.9rem;
+  margin-top: -0.1rem;
+}
+
+.resultSection > button {
+  margin-top: 2.2rem;
+  padding: 0.55rem;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  font-weight: var(--fw-700);
+  border: none;
+  border-radius: 4px;
+  background-color: var(--clr-cyan);
+  color: var(--clr-grayish-cyan-700);
+  cursor: pointer;
+  transition: background-color 200ms ease-in, opacity 200ms ease-in;
+}
+
+.resultSection > button.disabled {
+  cursor: auto;
+  opacity: 0.2;
+}
+
+.resultSection > button:not(.disabled):hover,
+.resultSection > button:not(.disabled):focus {
+  background-color: var(--clr-cyan-ltr);
+}
+
+.resultSection > button:not(.disabled):focus {
+  outline: 2px solid var(--clr-cyan);
+  outline-offset: 1px;
+}
+
+@media only screen and (min-width: 500px) {
+  .container {
+    width: 500px;
+    min-width: unset;
+    max-width: unset;
+  }
+}
+
+@media only screen and (min-width: 920px) {
+  .logo {
+    margin-top: 0;
+  }
+
+  .container {
+    width: 920px;
+    flex-direction: row;
+    margin-top: 5.4rem;
+    margin-bottom: 4.7rem;
+    padding: 0.4rem 2rem 2rem;
+    gap: 3.01rem;
+  }
+
+  .inputSection {
+    width: 46.1%;
+    padding: 2.45rem 0 1rem 1rem;
+  }
+
+  .inputSection > .label:not(:first-child) {
+    margin-top: 2.5rem;
+  }
+
+  .resultSection {
+    margin-top: 1.58rem;
+    width: 48.25%;
+    padding: 3.5rem 2.5rem 2.6rem 2.5rem;
+  }
+
+  .resultRow + .resultRow {
+    margin-top: 3.3rem;
+  }
+
+  .resultRow .resultText {
+    color: var(--clr-cyan);
+    font-size: 2.9rem;
+    margin-top: -0.9rem;
+  }
+
+  .resultSection > button {
+    margin-top: auto;
+  }
+}

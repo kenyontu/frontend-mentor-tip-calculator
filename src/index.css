@@ -1,13 +1,94 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+/* Custom properties */
+
+:root {
+  /* Colors */
+
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-cyan: hsl(172, 67%, 45%);
+  --clr-cyan-ltr: hsl(172, 67%, 75%);
+
+  --clr-grayish-cyan-100: hsl(189, 41%, 97%);
+  --clr-grayish-cyan-200: hsl(185, 41%, 90%);
+  --clr-grayish-cyan-300: hsl(185, 41%, 84%);
+  --clr-grayish-cyan-400: hsl(184, 14%, 56%);
+  --clr-grayish-cyan-500: hsl(186, 14%, 43%);
+  --clr-grayish-cyan-700: hsl(183, 100%, 15%);
+
+  --clr-error: red;
+
+  --clr-shadow: hsla(172, 67%, 35%, 0.15);
+
+  /* Font families */
+
+  --ff-space-mono: 'Space Mono', sans-serif;
+
+  /* Font weights */
+
+  --fw-700: 700;
+
+  /* Font sizes */
+
+  --fs-input: 1.5rem;
+
+  /* Border Radius */
+
+  --br-input: 4px;
+}
+
+/* Reset */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body,
+#root {
+  min-height: 100vh;
+  line-height: 1.5;
+  font-family: var(--ff-space-mono);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body,
+h1,
+p {
+  margin: 0;
+}
+
+input,
+button {
+  font: inherit;
+}
+
+img {
+  display: block;
+}
+
+/* General styles */
+
+body,
+#root {
+  font-family: var(--ff-space-mono);
+  background-color: var(--clr-grayish-cyan-300);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+::selection {
+  background-color: var(--clr-cyan-ltr);
+}
+
+@media only screen and (min-width: 920px) {
+  body,
+  #root {
+    justify-content: center;
+  }
 }

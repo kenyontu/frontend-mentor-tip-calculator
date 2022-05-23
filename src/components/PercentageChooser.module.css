@@ -1,0 +1,86 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.option {
+  position: relative;
+}
+
+.option input {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.option label {
+  display: block;
+  padding: 0.36rem 1rem 0.36rem 1rem;
+  background-color: var(--clr-grayish-cyan-700);
+  color: var(--clr-grayish-cyan-100);
+  border-radius: 4px;
+  font-size: var(--fs-input);
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 200ms ease-in, color 200ms ease-in;
+}
+
+.option label:hover,
+.option input:focus + label {
+  background-color: var(--clr-cyan-ltr);
+  color: var(--clr-grayish-cyan-700);
+}
+
+.option input:focus + label {
+  outline: 2px solid var(--clr-cyan);
+  outline-offset: 1px;
+}
+
+.option input:checked + label {
+  background-color: var(--clr-cyan);
+  color: var(--clr-grayish-cyan-700);
+}
+
+.customContainer {
+  position: relative;
+}
+
+.customContainer > button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  font-size: var(--fs-input);
+  text-align: right;
+  background-color: var(--clr-grayish-cyan-100);
+  color: var(--clr-grayish-cyan-500);
+  padding-right: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 200ms ease-in;
+}
+
+.customContainer > button:hover,
+.customContainer > button:focus {
+  background-color: var(--clr-cyan-ltr);
+}
+
+.customContainer > button:focus {
+  outline: 2px solid var(--clr-cyan);
+  outline-offset: 1px;
+}
+
+.customContainer > button.hide {
+  display: none;
+}
+
+@media only screen and (min-width: 500px) {
+  .container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
