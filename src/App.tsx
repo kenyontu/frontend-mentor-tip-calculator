@@ -46,9 +46,13 @@ function App() {
 
   return (
     <>
-      <img className={styles.logo} src={logo} alt="" />
+      <header>
+        <h1>
+          <img className={styles.logo} src={logo} alt="Splitter logo" />
+        </h1>
+      </header>
       <main className={styles.container}>
-        <section className={styles.inputSection}>
+        <div className={styles.inputSection}>
           <Label
             htmlFor="bill"
             className={styles.label}
@@ -94,8 +98,8 @@ function App() {
             onChange={peopleCount.onChange}
             placeholder="1"
           />
-        </section>
-        <section className={styles.resultSection}>
+        </div>
+        <div className={styles.resultSection}>
           <div className={styles.resultRow}>
             <div>
               <span>Tip Amount</span>
@@ -128,7 +132,7 @@ function App() {
           >
             Reset
           </button>
-        </section>
+        </div>
       </main>
     </>
   )
