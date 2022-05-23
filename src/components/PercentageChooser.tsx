@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react'
+import { useRef, useEffect } from 'react'
 import classNames from 'classnames'
 
 import styles from './PercentageChooser.module.css'
