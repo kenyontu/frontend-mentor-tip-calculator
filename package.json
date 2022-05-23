@@ -1,5 +1,6 @@
 {
   "name": "tip-calculator-app",
+  "homepage": "https://kenyontu.github.io/frontend-mentor-tip-calculator/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
