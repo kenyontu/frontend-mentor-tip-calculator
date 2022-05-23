@@ -47,3 +47,35 @@ Users should be able to:
 #### Scaling text down to fit an area
 
 One issue I had was when using big numbers, the result number would overlap other elements and go out of the screen, to counter this, I created a special component for it that would scale down the text based on the length of it.
+
+#### Firefox and absolute positioned buttons
+
+Consider the following example:
+
+```html
+<div class="container">
+  <button>Button</button>
+</div>
+```
+
+```css
+.container {
+  position: relative;
+  width: 100px;
+  height: 50px;
+  background-color: red;
+}
+
+.container > button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: green;
+  color: white;
+  border: none;
+}
+```
+
+On Firefox the button will not cover the entire width of the container, one way to fix this is to set `width: 100%`,
